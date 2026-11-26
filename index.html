@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>每日早报 · 游戏与 AI</title>
+<meta name="description" content="每天早上 8 点更新的游戏与 AI 资讯。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: one narrow reading column; a sticky bar switches day and section. Games = signal orange, AI = cobalt. */
+:root {
+  --bg: #f3f4f1;
+  --surface: #ffffff;
+  --ink: #16181d;
+  --muted: #5d6270;
+  --line: #dfe1dc;
+  --games: #c2410c;
+  --games-soft: #fbe7dc;
+  --ai: #2647c9;
+  --ai-soft: #e3e8fb;
+  --mine: #0f7a55;
+  --mine-soft: #dcf2e8;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101216; --surface: #181b21; --ink: #e9eaee; --muted: #9aa0ad; --line: #2a2e37;
+    --games: #ff8a4c; --games-soft: #3a2116; --ai: #8ea6ff; --ai-soft: #1d2442;
+    --mine: #4fd1a0; --mine-soft: #12302a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101216; --surface: #181b21; --ink: #e9eaee; --muted: #9aa0ad; --line: #2a2e37;
+  --games: #ff8a4c; --games-soft: #3a2116; --ai: #8ea6ff; --ai-soft: #1d2442;
+  --mine: #4fd1a0; --mine-soft: #12302a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.65 var(--font-body);
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  background: var(--bg); z-index: 10;
+}
+.wrap {
+  max-width: 720px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--ai); outline-offset: 2px; border-radius: 4px; }
+
+/* masthead */
+.mast { padding-block: 28px 18px; display: grid; gap: 6px; }
+.mast .kicker {
+  font: 700 12px/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+  display: flex; gap: 10px; flex-wrap: wrap;
+}
+.mast h1 { margin: 0; font-weight: 900; font-size: clamp(30px, 8vw, 44px); line-height: 1.15; letter-spacing: -.01em; text-wrap: balance; }
+.mast h1 .d { font-family: var(--font-mono); font-weight: 700; }
+.mast .sub { margin: 0; color: var(--muted); font-size: 14px; }
+
+/* sticky bar */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.bar .wrap { display: flex; align-items: center; gap: 8px; padding-block: 10px; flex-wrap: wrap; }
+.seg { display: flex; gap: 4px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+.seg button {
+  font: 500 14px/1 var(--font-body); color: var(--muted); background: none; border: 0;
+  padding: 8px 14px; border-radius: 999px; cursor: pointer; display: flex; gap: 6px; align-items: center;
+}
+.seg button .n { font: 700 11px/1 var(--font-mono); opacity: .8; }
+.seg button[aria-pressed="true"] { color: var(--surface); background: var(--ink); }
+.seg button[data-s="games"][aria-pressed="true"] { background: var(--games); }
+.seg button[data-s="ai"][aria-pressed="true"] { background: var(--ai); }
+.days { margin-left: auto; display: flex; gap: 4px; align-items: center; }
+.days button, .days select {
+  font: 500 13px/1 var(--font-mono); color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 8px; height: 34px; cursor: pointer;
+}
+.days button { width: 34px; }
+.days button:disabled { opacity: .35; cursor: default; }
+.days select { padding: 0 8px; }
+
+/* sections */
+main { padding-block: 8px 48px; display: grid; gap: 36px; }
+.sec { display: grid; gap: 18px; }
+.sec-head { display: flex; align-items: baseline; gap: 12px; border-bottom: 3px solid var(--c); padding-bottom: 8px; }
+.sec-head h2 { margin: 0; font-size: 26px; font-weight: 900; color: var(--c); }
+.sec-head .meta { font: 500 12px/1 var(--font-mono); color: var(--muted); letter-spacing: .06em; }
+.sec.games { --c: var(--games); --soft: var(--games-soft); }
+.sec.ai { --c: var(--ai); --soft: var(--ai-soft); }
+
+.tier { display: grid; gap: 10px; }
+.tier h3 {
+  margin: 0; font: 700 12px/1 var(--font-mono); letter-spacing: .14em; color: var(--muted);
+  display: flex; align-items: center; gap: 8px;
+}
+.tier h3::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.item { min-width: 0; }
+.important .item {
+  background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--c);
+  border-radius: 10px; padding: 14px 16px;
+}
+.notable .item { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; }
+.brief .list { gap: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.brief .item { padding: 10px 16px; border-top: 1px solid var(--line); }
+.brief .item:first-child { border-top: 0; }
+
+.item .t { margin: 0; font-weight: 700; line-height: 1.45; text-wrap: pretty; }
+.important .item .t { font-size: 18px; }
+.notable .item .t { font-size: 16px; }
+.brief .item .t { font-size: 15px; font-weight: 500; }
+.item .t a { text-decoration: none; background-image: linear-gradient(var(--soft), var(--soft)); background-size: 100% 0; background-repeat: no-repeat; background-position: 0 90%; transition: background-size .15s; }
+.item .t a:hover { background-size: 100% 40%; }
+.item .t a::after { content: " ↗"; font-size: .75em; color: var(--muted); }
+.item .s { margin: 4px 0 0; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+.brief .item .s { font-size: 13.5px; margin-top: 2px; }
+.item .m { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font: 500 12px/1.3 var(--font-mono); color: var(--muted); }
+.brief .item .m { margin-top: 4px; }
+.tag { font: 700 11px/1 var(--font-body); padding: 4px 7px; border-radius: 5px; background: var(--mine-soft); color: var(--mine); }
+.date { font-variant-numeric: tabular-nums; }
+
+.state { padding: 40px 0; text-align: center; color: var(--muted); }
+footer { padding-block: 0 40px; color: var(--muted); font-size: 12.5px; }
+footer p { margin: 0; }
+
+@media (max-width: 480px) {
+  .days { margin-left: 0; width: 100%; justify-content: space-between; }
+  .days select { flex: 1; }
+  .seg { width: 100%; }
+  .seg button { flex: 1; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="wrap mast">
+  <div class="kicker"><span id="issue">No. —</span><span id="weekday"></span></div>
+  <h1><span class="d" id="date-big">—</span> 早报</h1>
+  <p class="sub">游戏与 AI，每天早上 8 点（新加坡时间）更新。</p>
+</header>
+
+<nav class="bar" aria-label="切换">
+  <div class="wrap">
+    <div class="seg" role="group" aria-label="板块">
+      <button id="seg-all" data-s="all" aria-pressed="true">全部</button>
+      <button id="seg-games" data-s="games" aria-pressed="false">游戏 <span class="n" id="n-games"></span></button>
+      <button id="seg-ai" data-s="ai" aria-pressed="false">AI <span class="n" id="n-ai"></span></button>
+    </div>
+    <div class="days">
+      <button id="prev" aria-label="前一天">‹</button>
+      <select id="day" aria-label="往期"></select>
+      <button id="next" aria-label="后一天">›</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+  <div class="state" id="state">正在加载…</div>
+</main>
+
+<footer class="wrap">
+  <p>每条标题链接到原始报道或转述它的页面；带「转述」的条目请以原文为准。</p>
+</footer>
+
+<script>
+(function () {
+  var SECTIONS = [
+    { id: "games", name: "游戏" },
+    { id: "ai", name: "AI" }
+  ];
+  var TIERS = [
+    { id: "important", name: "重要" },
+    { id: "notable", name: "值得关注" },
+    { id: "brief", name: "简讯" }
+  ];
+  var WEEK = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+  var dates = [];
+  var cache = {};
+  var current = null;
+  var filter = "all";
+
+  try { filter = localStorage.getItem("digest-filter") || "all"; } catch (e) {}
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+
+  function safeUrl(u) {
+    return typeof u === "string" && /^https:\/\//.test(u) ? u : null;
+  }
+
+  function count(sec) {
+    if (!sec) return 0;
+    return TIERS.reduce(function (a, t) { return a + ((sec[t.id] || []).length); }, 0);
+  }
+
+  function renderItem(it) {
+    var li = el("li", "item");
+    var h = el("p", "t");
+    var url = safeUrl(it.url);
+    if (url) {
+      var a = el("a", null, it.title);
+      a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
+      h.appendChild(a);
+    } else {
+      h.textContent = it.title;
+    }
+    li.appendChild(h);
+    if (it.summary) li.appendChild(el("p", "s", it.summary));
+    var m = el("div", "m");
+    if (it.tag) m.appendChild(el("span", "tag", it.tag));
+    if (it.date) m.appendChild(el("span", "date", it.date));
+    if (it.source) m.appendChild(el("span", null, it.source));
+    li.appendChild(m);
+    return li;
+  }
+
+  function render(d) {
+    var main = $("main");
+    main.innerHTML = "";
+    SECTIONS.forEach(function (s) {
+      var data = d[s.id];
+      if (!data) return;
+      var sec = el("section", "sec " + s.id);
+      sec.id = "sec-" + s.id;
+      if (filter !== "all" && filter !== s.id) sec.hidden = true;
+      var head = el("div", "sec-head");
+      head.appendChild(el("h2", null, s.name));
+      head.appendChild(el("span", "meta", count(data) + " 条"));
+      sec.appendChild(head);
+      TIERS.forEach(function (t) {
+        var items = data[t.id] || [];
+        if (!items.length) return;
+        var tier = el("div", "tier " + t.id);
+        tier.appendChild(el("h3", null, t.name));
+        var ul = el("ul", "list");
+        items.forEach(function (it) { ul.appendChild(renderItem(it)); });
+        tier.appendChild(ul);
+        sec.appendChild(tier);
+      });
+      main.appendChild(sec);
+    });
+    $("n-games").textContent = count(d.games) || "";
+    $("n-ai").textContent = count(d.ai) || "";
+  }
+
+  function header(date) {
+    var p = date.split("-");
+    var dt = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2]));
+    $("date-big").textContent = +p[1] + "月" + +p[2] + "日";
+    $("weekday").textContent = p[0] + " · " + WEEK[dt.getUTCDay()];
+    var idx = dates.slice().reverse().indexOf(date);
+    $("issue").textContent = "No. " + String(idx + 1).padStart(3, "0");
+    document.title = +p[1] + "月" + +p[2] + "日早报 · 游戏与 AI";
+    var i = dates.indexOf(date);
+    $("prev").disabled = i >= dates.length - 1;
+    $("next").disabled = i <= 0;
+    $("day").value = date;
+  }
+
+  function show(date) {
+    if (dates.indexOf(date) < 0) date = dates[0];
+    current = date;
+    header(date);
+    if (location.hash.slice(1) !== date) {
+      history.replaceState(null, "", date === dates[0] ? location.pathname + location.search : "#" + date);
+    }
+    if (cache[date]) { render(cache[date]); return; }
+    $("main").innerHTML = '<div class="state">正在加载…</div>';
+    fetch("data/" + date + ".json", { cache: "no-cache" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) { cache[date] = d; if (current === date) render(d); })
+      .catch(function () {
+        $("main").innerHTML = '<div class="state">这一期没能加载，刷新页面再试一次。</div>';
+      });
+  }
+
+  function setFilter(f) {
+    filter = f;
+    try { localStorage.setItem("digest-filter", f); } catch (e) {}
+    ["all", "games", "ai"].forEach(function (k) {
+      $("seg-" + k).setAttribute("aria-pressed", String(k === f));
+    });
+    SECTIONS.forEach(function (s) {
+      var n = $("sec-" + s.id);
+      if (n) n.hidden = !(f === "all" || f === s.id);
+    });
+  }
+
+  ["all", "games", "ai"].forEach(function (k) {
+    $("seg-" + k).addEventListener("click", function () { setFilter(k); window.scrollTo({ top: 0 }); });
+  });
+  $("prev").addEventListener("click", function () { var i = dates.indexOf(current); if (i < dates.length - 1) show(dates[i + 1]); });
+  $("next").addEventListener("click", function () { var i = dates.indexOf(current); if (i > 0) show(dates[i - 1]); });
+  $("day").addEventListener("change", function (e) { show(e.target.value); });
+  window.addEventListener("hashchange", function () { var h = location.hash.slice(1); if (h && h !== current) show(h); });
+
+  setFilter(filter);
+
+  fetch("data/index.json", { cache: "no-cache" })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (idx) {
+      dates = (idx.dates || []).slice().sort().reverse();
+      if (!dates.length) throw new Error("empty");
+      var sel = $("day");
+      dates.forEach(function (d) {
+        var p = d.split("-");
+        var o = el("option", null, +p[1] + "月" + +p[2] + "日");
+        o.value = d; sel.appendChild(o);
+      });
+      show(location.hash.slice(1) || dates[0]);
+    })
+    .catch(function () {
+      $("main").innerHTML = '<div class="state">还没有可显示的内容，刷新页面再试一次。</div>';
+    });
+})();
+</script>
+</body>
+</html>

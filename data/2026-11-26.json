@@ -1,0 +1,289 @@
+{
+  "date": "2026-11-26",
+  "updated": "2026-11-26T15:30:00Z",
+  "games": {
+    "important": [
+      {
+        "title": "巫师3重制版 5.02 补丁上线",
+        "summary": "调整多项技能与突变平衡（如 Catalyst、肾上腺素激增被削弱），照相模式可单独隐藏杰洛特和 NPC，新增 32:9 超宽屏支持；PC 端优化了路径追踪与光线重建，并修复装卸 mod 后商人库存清空的问题。",
+        "url": "https://www.thewitcher.com/us/en/news/52162/patch-5-02-for-the-witcher-3-wild-hunt-remastered-is-live",
+        "source": "The Witcher 官网",
+        "date": "11-26",
+        "tag": "你在玩"
+      },
+      {
+        "title": "CDPR：《巫师4》将在 PS5、Xbox、PC 同步首发",
+        "summary": "CD Projekt Red 表示新作不会因与索尼的合作而冷落其他平台，目前没有具体日期，只给出 2028 年的窗口。",
+        "url": "https://gamingroute.com/gaming-news-today-november-25-2026/",
+        "source": "Gaming Route（转述 VGC）",
+        "date": "11-25"
+      },
+      {
+        "title": "Steam 今年没有黑五大促，冬促 12 月 17 日开始",
+        "summary": "秋促已于 10 月 1 日至 8 日结束，下一次全站促销是 12 月 17 日到 1 月 4 日的冬季特卖；Valve 自 9 月底起暂停排期新的每日、周中和周末特惠。",
+        "url": "https://www.digitalcitizen.life/steam-autumn-sale-2026-over-winter-sale-december-17-black-friday/",
+        "source": "Digital Citizen",
+        "date": "11-25"
+      },
+      {
+        "title": "Capcom 宣布《Exoprimal》停服",
+        "summary": "高级通行证与内购已于 11 月 24 日停售，游戏和 DLC 将在 2027 年 3 月 30 日从主机和 PC 商店下架，在线服务 2027 年 9 月 29 日关闭。",
+        "url": "https://gamingroute.com/gaming-news-today-november-25-2026/",
+        "source": "Gaming Route（转述 Kotaku）",
+        "date": "11-25"
+      },
+      {
+        "title": "《堕落之主 2》定于 2027 年 4 月发售",
+        "summary": "CI Games 确认登陆 PS5、Xbox Series、Switch 2 和 PC，具体日期将在 12 月公布。",
+        "url": "https://gamingroute.com/gaming-news-today-november-25-2026/",
+        "source": "Gaming Route",
+        "date": "11-25"
+      }
+    ],
+    "notable": [
+      {
+        "title": "Dota 2 7.42a 热修复：集中修崩溃",
+        "summary": "修复 Tormentor 死亡、Kez 钩爪被反射、炸弹人粘性炸弹等导致的服务器崩溃，并修正兵线卡住、幻象与 Item Potency 等问题。上周的 7.42 大版本加入了 Item Potency 属性、Tormentor 改为掉落召唤巨型兵线的道具，后续几周预计还有英雄平衡补丁。",
+        "url": "https://store.steampowered.com/news/app/570/view/689774670193362169",
+        "source": "Steam 官方公告",
+        "date": "11-24",
+        "tag": "你在玩"
+      },
+      {
+        "title": "狂热运输3 第三次稳定性更新已全平台推送",
+        "summary": "改进火车与电车编组的显示排序，简化备用终点站的设置，Mod 中心报错更清楚并显示剩余空间；官方称首个大型内容更新计划在今年年底前推出。",
+        "url": "https://www.transportfever3.com/news/third-stability-update/",
+        "source": "Transport Fever 3 官网",
+        "date": "11-19",
+        "tag": "你在玩"
+      },
+      {
+        "title": "Team Cherry 11 月 27 日直播，公布《丝之歌》DLC 进展",
+        "summary": "「Cherry Time」节目将更新免费 DLC《Sea of Sorrow》的消息，官方此前给出的窗口是 2026 年内。",
+        "url": "https://gamingroute.com/gaming-news-today-november-25-2026/",
+        "source": "Gaming Route（转述 VGC）",
+        "date": "11-25"
+      },
+      {
+        "title": "Rockstar：《GTA 6》没有任务重玩功能",
+        "summary": "开发者 Scott Butchard 对 Kotaku 表示早期考虑过，但与剧情体验相冲突而放弃；本周因 GTA 6 刚发售，其他大作普遍避开了发售档期。",
+        "url": "https://gamingroute.com/gaming-news-today-november-25-2026/",
+        "source": "Gaming Route（转述 Kotaku）",
+        "date": "11-25"
+      },
+      {
+        "title": "《EA Sports FC 27》加入 AI 重现的 John Motson 解说",
+        "summary": "在已故传奇解说员家属同意下，用 AI 复刻其声音，作为可选解说阵容。",
+        "url": "https://gamingroute.com/gaming-news-today-november-25-2026/",
+        "source": "Gaming Route（转述 VGC）",
+        "date": "11-25"
+      },
+      {
+        "title": "《Skate.》取消赛季和通行证",
+        "summary": "第 5 赛季 12 月 1 日结束，同日推出 0.33.1 更新，加入 S.K.A.T.E. 模式和近距离语音。",
+        "url": "https://gamingroute.com/gaming-news-today-november-25-2026/",
+        "source": "Gaming Route（转述 EA）",
+        "date": "11-25"
+      },
+      {
+        "title": "《Arkheron》11 月 27 日开启抢先体验",
+        "summary": "同步登陆 PC、PS5 和 Xbox Series。",
+        "url": "https://news.instant-gaming.com/en/articles/23152-this-week-s-releases-from-november-23-to-29-2026",
+        "source": "Instant Gaming",
+        "date": "11-27"
+      }
+    ],
+    "brief": [
+      {
+        "title": "城市建造《Chronocracy》今日在 Steam 发售",
+        "summary": "HeroCraft PC 发行。",
+        "url": "https://www.gamegrin.com/news/top-31-new-steam-games-this-week-23rd-of-november-to-the-29th-of-november-2026/",
+        "source": "GameGrin",
+        "date": "11-26"
+      },
+      {
+        "title": "《Machine Party》今日发售",
+        "summary": "派对游戏玩法，小游戏全是谋杀主题；各家报道的平台列表不一致。",
+        "url": "https://www.purexbox.com/news/2026/11/10plus-xbox-games-are-releasing-today-including-a-murderous-twist-on-mario-party-november-26",
+        "source": "Pure Xbox",
+        "date": "11-26"
+      },
+      {
+        "title": "《Security 51》登陆主机与 PC",
+        "summary": "受《请出示文件》启发的 51 区保安模拟。",
+        "url": "https://www.purexbox.com/news/2026/11/10plus-xbox-games-are-releasing-today-including-a-murderous-twist-on-mario-party-november-26",
+        "source": "Pure Xbox",
+        "date": "11-26"
+      },
+      {
+        "title": "《Reshine》与《No Body No Problem!》今日上 PC",
+        "summary": "前者是修复旧物的清洁模拟，后者是嫌犯藏尸、一名玩家当警察的多人游戏。",
+        "url": "https://news.instant-gaming.com/en/articles/23152-this-week-s-releases-from-november-23-to-29-2026",
+        "source": "Instant Gaming",
+        "date": "11-26"
+      },
+      {
+        "title": "《Arctic Drive》进入抢先体验",
+        "summary": "四人合作冬季生存，一边探索一边修车。",
+        "url": "https://news.instant-gaming.com/en/articles/23152-this-week-s-releases-from-november-23-to-29-2026",
+        "source": "Instant Gaming",
+        "date": "11-25"
+      },
+      {
+        "title": "合作解谜《Me and You》发售",
+        "summary": "受《Baba Is You》启发，玩家一起制定和打破规则。",
+        "url": "https://news.instant-gaming.com/en/articles/23152-this-week-s-releases-from-november-23-to-29-2026",
+        "source": "Instant Gaming",
+        "date": "11-25"
+      },
+      {
+        "title": "《猫咪咖啡馆经理 2》开启抢先体验",
+        "summary": "副标题 Big City Bliss，经营模拟。",
+        "url": "https://www.gamegrin.com/news/top-31-new-steam-games-this-week-23rd-of-november-to-the-29th-of-november-2026/",
+        "source": "GameGrin",
+        "date": "11-25"
+      }
+    ]
+  },
+  "ai": {
+    "important": [
+      {
+        "title": "OpenAI 合并 ChatGPT 的 Chat 与 Work，共用一个额度",
+        "summary": "统一界面已向少量 Pro 用户推出，Chat、Work 与 Codex 将共用按 token 计的额度池，重度用户可能更快触顶；Instant 模型对话仍不限量，更大范围推送计划在 12 月。",
+        "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
+        "source": "TechCrunch",
+        "date": "11-25"
+      },
+      {
+        "title": "OpenAI：GPT-6 展现出蛋白质设计能力",
+        "summary": "通用推理和代码生成的蛋白质序列，在实验中对五个靶点显示出结合证据。",
+        "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/",
+        "source": "The Neuron（转述 OpenAI）",
+        "date": "11-25"
+      },
+      {
+        "title": "DeepMind 为 Antigravity 推出质谱分析技能",
+        "summary": "在 100 张谱图测试中，Gemini 配合这些工具约 97% 能准确识别分子，不用工具时不到 4%；手性分子和部分同分异构体仍需其他测量。",
+        "url": "https://www.ventureatlas.org/news/2026-11-25-deepmind-mass-spec-skills",
+        "source": "Venture Atlas",
+        "date": "11-25"
+      },
+      {
+        "title": "欧盟拟设 500 亿欧元主权科技股权基金",
+        "summary": "欧盟委员会提议重点投向 AI 和量子，同时起草带有欧盟采购优先条款的《量子法案》，仍需各方谈判。",
+        "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-26-2026-one-meter-for-chatgpt-and-codex-cognition-doubles-down-europe-2j0o",
+        "source": "DEV 社区日报（转述 DW）",
+        "date": "11-25"
+      },
+      {
+        "title": "FCC 批准 SpaceX 部署最多 100 万颗 AI 卫星",
+        "summary": "名为 Starmind 的计划搭载 AI 芯片，The Verge 称这是太空数据中心语境下的首次此类批准。",
+        "url": "https://aitoolly.com/ai-news/2026-11-26",
+        "source": "AIToolly（转述 The Verge）",
+        "date": "11-25"
+      },
+      {
+        "title": "Axios：OpenAI 与 Anthropic 员工担忧先进模型的安全发布",
+        "summary": "二十多位知情人士表示，两家公司内部对尚未发布模型的风险存在顾虑。",
+        "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/",
+        "source": "The Neuron（转述 Axios）",
+        "date": "11-24"
+      }
+    ],
+    "notable": [
+      {
+        "title": "Cognition 发布编程模型 SWE-2.1",
+        "summary": "驱动 Devin 的新模型分标准、Lightning、Cyber 三个版本，厂商自测成绩约为上一代两倍，尚无独立评测。",
+        "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-26-2026-one-meter-for-chatgpt-and-codex-cognition-doubles-down-europe-2j0o",
+        "source": "DEV 社区日报",
+        "date": "11-24"
+      },
+      {
+        "title": "Anthropic：Claude 的 artifact 可装成桌面应用",
+        "summary": "Mac 和 Windows 均支持；同日在 MCP 两周年之际宣布 Skills over MCP 和 Tasks。",
+        "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/",
+        "source": "The Neuron",
+        "date": "11-25"
+      },
+      {
+        "title": "OpenAI 数学预印本称矩阵乘法指数为 9/4",
+        "summary": "若成立将是重大结果，目前仍待独立验证。",
+        "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/",
+        "source": "The Neuron",
+        "date": "11-24"
+      },
+      {
+        "title": "Sakana AI 发布 30B 推理模型 Namazu Small",
+        "summary": "基于 NVIDIA Nemotron 3 Nano，联网研究类任务表现好，闭卷知识题偏弱。",
+        "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-26-2026-one-meter-for-chatgpt-and-codex-cognition-doubles-down-europe-2j0o",
+        "source": "DEV 社区日报",
+        "date": "11-25"
+      },
+      {
+        "title": "Amazon：开源 AI 代理几乎自主利用了一个零日漏洞",
+        "summary": "这是 AI 代理攻防能力的又一信号，Anthropic 同期也公布了诱导代理越轨的蜜罐测试。",
+        "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/",
+        "source": "The Neuron（转述 Gizmodo、Wired）",
+        "date": "11-24"
+      },
+      {
+        "title": "美国商务部将 Megaspeed 列入实体清单",
+        "summary": "事件与黄仁勋相关争议有关，他在芯片出口管制上仍受国会审查。",
+        "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/",
+        "source": "The Neuron（转述 The Verge）",
+        "date": "11-24"
+      },
+      {
+        "title": "Google：Workspace AI 代理须经 MCP 或 CLI 接入",
+        "summary": "2027 年 2 月 1 日起生效，附带策略检查和 OAuth 身份。",
+        "url": "https://riorundown.substack.com/p/ai-news-nov-26-2026-agentic-ai-infrastructure",
+        "source": "RIO Rundown（转述 Help Net Security）",
+        "date": "11-26"
+      },
+      {
+        "title": "AMD 与 SemiAnalysis 优化 MI355X 上的代理推理",
+        "summary": "TokenSpeed 优化让 Muse Spark 开放 MoE 模型的交互性提升 2.5% 到 30%。",
+        "url": "https://riorundown.substack.com/p/ai-news-nov-26-2026-agentic-ai-infrastructure",
+        "source": "RIO Rundown",
+        "date": "11-25"
+      }
+    ],
+    "brief": [
+      {
+        "title": "Midjourney 推出动漫模型 Niji V8",
+        "summary": "附带专门的编辑模型。",
+        "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/",
+        "source": "The Neuron",
+        "date": "11-25"
+      },
+      {
+        "title": "Meta 把 Muse 助手接进 Instagram 私信",
+        "summary": "还与 Walmart 合作，在 Muse 里提供黑五优惠。",
+        "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/",
+        "source": "The Neuron（转述 TechCrunch）",
+        "date": "11-24"
+      },
+      {
+        "title": "Tidal 将下架数百万首纯 AI 生成曲目",
+        "summary": "AI 辅助创作的音乐仍允许上架。",
+        "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/",
+        "source": "The Neuron（转述 TechCrunch）",
+        "date": "11-24"
+      },
+      {
+        "title": "PrismML 发布 Ternary Bonsai 2.5 27B",
+        "summary": "三值量化的紧凑模型，体积约 5.9 GB。",
+        "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/",
+        "source": "The Neuron",
+        "date": "11-25"
+      },
+      {
+        "title": "英国 FCA 发布对代理式 AI 的监管预期",
+        "summary": "面向部署自主 AI 代理的金融机构。",
+        "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/",
+        "source": "The Neuron",
+        "date": "11-25"
+      }
+    ]
+  }
+}
