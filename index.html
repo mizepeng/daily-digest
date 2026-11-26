@@ -98,6 +98,8 @@ img { max-width: 100%; display: block; }
   font-variant-numeric: tabular-nums;
   background: linear-gradient(100deg, var(--g1) 0%, var(--g2) 32%, var(--a2) 68%, var(--a1) 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
+  /* room for glyph overhang: the clip box is narrower than the digits with negative tracking */
+  padding: .08em .12em .06em .02em; margin: -.08em -.06em -.06em -.02em;
 }
 .mast-word { display: grid; gap: 2px; padding-bottom: 8px; }
 .mast-word b { font: 900 clamp(30px, 7vw, 52px)/1 var(--f-head); letter-spacing: .02em; }
