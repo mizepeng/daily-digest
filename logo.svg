@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="每日早报">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffad1f"/>
+      <stop offset=".34" stop-color="#f2541b"/>
+      <stop offset=".66" stop-color="#3651f5"/>
+      <stop offset="1" stop-color="#10b8d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <path d="M20 17.5c0-2.7 2.9-4.4 5.3-3.1l22 12.9c2.3 1.4 2.3 4.7 0 6.1l-22 12.9c-2.4 1.4-5.3-.3-5.3-3.1z" fill="#fff"/>
+  <path d="M48 7.5l2.1 5.4 5.4 2.1-5.4 2.1L48 22.5l-2.1-5.4-5.4-2.1 5.4-2.1z" fill="#fff"/>
+  <circle cx="29" cy="32" r="3.4" fill="#3651f5"/>
+</svg>

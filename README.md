@@ -11,6 +11,7 @@
 - `index.html`：页面本身，读取 `data/` 里的 JSON 渲染，平时不用改。
 - `data/index.json`：所有期的日期列表，`{"dates": ["2026-11-27", "2026-11-26"]}`，顺序不限，页面会按新到旧排。
 - `data/YYYY-MM-DD.json`：每一期内容。
+- `logo.svg`：网站 logo，也是浏览器标签图标。
 - `.nojekyll`：让 GitHub Pages 原样发布文件。
 
 ## 每期 JSON 格式
