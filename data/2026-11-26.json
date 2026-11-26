@@ -9,14 +9,18 @@
         "url": "https://www.thewitcher.com/us/en/news/52162/patch-5-02-for-the-witcher-3-wild-hunt-remastered-is-live",
         "source": "The Witcher 官网",
         "date": "11-26",
-        "tag": "你在玩"
+        "tag": "你在玩",
+        "image": "https://public.cdn.cdpr.app/common/news/4605cf1503e88b5e28310a300d054bbe_q90_1920x1080_1.png",
+        "image_alt": "巫师3重制版 5.02 补丁公告配图"
       },
       {
         "title": "CDPR：《巫师4》将在 PS5、Xbox、PC 同步首发",
-        "summary": "CD Projekt Red 表示新作不会因与索尼的合作而冷落其他平台，目前没有具体日期，只给出 2028 年的窗口。",
-        "url": "https://gamingroute.com/gaming-news-today-november-25-2026/",
-        "source": "Gaming Route（转述 VGC）",
-        "date": "11-25"
+        "summary": "CD Projekt Red 表示与索尼的合作只涉及营销，新作会在 Xbox 与 PS5、PC 同一天首发。",
+        "url": "https://www.videogameschronicle.com/news/no-one-gets-left-behind-cdpr-says-the-witcher-4-will-launch-on-xbox-day-one-despite-sony-agreement/",
+        "source": "VGC",
+        "date": "11-25",
+        "image": "https://www.videogameschronicle.com/files/2026/11/The-Witcher-4.jpg",
+        "image_alt": "《巫师4》配图"
       },
       {
         "title": "Steam 今年没有黑五大促，冬促 12 月 17 日开始",
@@ -28,16 +32,20 @@
       {
         "title": "Capcom 宣布《Exoprimal》停服",
         "summary": "高级通行证与内购已于 11 月 24 日停售，游戏和 DLC 将在 2027 年 3 月 30 日从主机和 PC 商店下架，在线服务 2027 年 9 月 29 日关闭。",
-        "url": "https://gamingroute.com/gaming-news-today-november-25-2026/",
-        "source": "Gaming Route（转述 Kotaku）",
-        "date": "11-25"
+        "url": "https://kotaku.com/capcoms-live-service-dino-shooter-is-going-offline-forever-just-four-years-later-2001000218",
+        "source": "Kotaku",
+        "date": "11-25",
+        "image": "https://kotaku.com/app/uploads/2026/11/goodnight-1200x675.jpg",
+        "image_alt": "《Exoprimal》停服报道配图"
       },
       {
         "title": "《堕落之主 2》定于 2027 年 4 月发售",
         "summary": "CI Games 确认登陆 PS5、Xbox Series、Switch 2 和 PC，具体日期将在 12 月公布。",
-        "url": "https://gamingroute.com/gaming-news-today-november-25-2026/",
+        "url": "https://gamingroute.com/lords-of-the-fallen-2-release-date/",
         "source": "Gaming Route",
-        "date": "11-25"
+        "date": "11-25",
+        "image": "https://i0.wp.com/gamingroute.com/wp-content/uploads/2026/11/lords-of-the-fallen-2-release-date.jpg",
+        "image_alt": "《堕落之主 2》配图"
       }
     ],
     "notable": [
@@ -47,7 +55,9 @@
         "url": "https://store.steampowered.com/news/app/570/view/689774670193362169",
         "source": "Steam 官方公告",
         "date": "11-24",
-        "tag": "你在玩"
+        "tag": "你在玩",
+        "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/570/capsule_616x353.jpg",
+        "image_alt": "Dota 2"
       },
       {
         "title": "狂热运输3 第三次稳定性更新已全平台推送",
@@ -55,14 +65,18 @@
         "url": "https://www.transportfever3.com/news/third-stability-update/",
         "source": "Transport Fever 3 官网",
         "date": "11-19",
-        "tag": "你在玩"
+        "tag": "你在玩",
+        "image": "https://www.transportfever3.com/wp-content/uploads/2026/11/2_1_Website_3000x1500_v11-scaled.jpg",
+        "image_alt": "狂热运输3 更新配图"
       },
       {
         "title": "Team Cherry 11 月 27 日直播，公布《丝之歌》DLC 进展",
-        "summary": "「Cherry Time」节目将更新免费 DLC《Sea of Sorrow》的消息，官方此前给出的窗口是 2026 年内。",
-        "url": "https://gamingroute.com/gaming-news-today-november-25-2026/",
-        "source": "Gaming Route（转述 VGC）",
-        "date": "11-25"
+        "summary": "「Cherry Time」节目将更新免费 DLC《Sea of Sorrow》的消息，具体内容没公布，VGC 猜测可能直接上线，也可能宣布延期。",
+        "url": "https://www.videogameschronicle.com/news/team-cherry-will-share-an-update-on-silksongs-dlc-on-november-27/",
+        "source": "VGC",
+        "date": "11-25",
+        "image": "https://www.videogameschronicle.com/files/2025/12/hollow-knight-silksong-sea-of-sorrow.jpg",
+        "image_alt": "《丝之歌》DLC《Sea of Sorrow》"
       },
       {
         "title": "Rockstar：《GTA 6》没有任务重玩功能",
@@ -152,21 +166,27 @@
         "summary": "统一界面已向少量 Pro 用户推出，Chat、Work 与 Codex 将共用按 token 计的额度池，重度用户可能更快触顶；Instant 模型对话仍不限量，更大范围推送计划在 12 月。",
         "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
         "source": "TechCrunch",
-        "date": "11-25"
+        "date": "11-25",
+        "image": "https://techcrunch.com/wp-content/uploads/2026/11/openai-chatgpt.jpg?resize=1200,800",
+        "image_alt": "ChatGPT"
       },
       {
         "title": "OpenAI：GPT-6 展现出蛋白质设计能力",
-        "summary": "通用推理和代码生成的蛋白质序列，在实验中对五个靶点显示出结合证据。",
-        "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/",
-        "source": "The Neuron（转述 OpenAI）",
-        "date": "11-25"
+        "summary": "OpenAI 称 GPT-6 只靠推理和代码就能设计蛋白质结构与序列，实验中对五个靶点显示出结合；它也承认完整结构预测仍然偏弱。",
+        "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+        "source": "OpenAI",
+        "date": "11-24",
+        "image": "https://images.ctfassets.net/kftzwdyauwt9/Eg5mCwwaA3KqnznOVCh0n/8e6deaef25fd508d9853ff86a95187c1/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities-social.png?w=1600&h=900&fit=fill",
+        "image_alt": "GPT-6 蛋白质设计研究配图"
       },
       {
         "title": "DeepMind 为 Antigravity 推出质谱分析技能",
         "summary": "在 100 张谱图测试中，Gemini 配合这些工具约 97% 能准确识别分子，不用工具时不到 4%；手性分子和部分同分异构体仍需其他测量。",
         "url": "https://www.ventureatlas.org/news/2026-11-25-deepmind-mass-spec-skills",
         "source": "Venture Atlas",
-        "date": "11-25"
+        "date": "11-25",
+        "image": "https://www.ventureatlas.org/news/2026-11-25-deepmind-mass-spec-skills/opengraph-image?d93f96603b5ebb75",
+        "image_alt": "DeepMind 质谱分析技能"
       },
       {
         "title": "欧盟拟设 500 亿欧元主权科技股权基金",
