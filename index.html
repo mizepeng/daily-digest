@@ -649,15 +649,18 @@ footer p { margin: 0; }
       if (window.scrollY > top) window.scrollTo({ top: top });
     });
   });
-  $("prev").addEventListener("click", function () { var i = dates.indexOf(current); if (i < dates.length - 1) show(dates[i + 1]); });
-  $("next").addEventListener("click", function () { var i = dates.indexOf(current); if (i > 0) show(dates[i - 1]); });
+  $("prev").addEventListener("click", function () { var i = dates.indexOf(current); if (i < dates.length - 1) { show(dates[i + 1]); toContent(); } });
+  $("next").addEventListener("click", function () { var i = dates.indexOf(current); if (i > 0) { show(dates[i - 1]); toContent(); } });
   var pop = $("day-pop"), btn = $("day-btn"), list = $("day-list"), act = -1;
   function opts() { return Array.prototype.slice.call(list.children); }
   function focusOpt(i) {
     var o = opts(); if (!o.length) return;
     act = Math.max(0, Math.min(o.length - 1, i));
     o.forEach(function (li, k) { li.classList.toggle("active", k === act); li.tabIndex = k === act ? 0 : -1; });
-    o[act].focus(); o[act].scrollIntoView({ block: "nearest" });
+    var li = o[act];
+    li.focus({ preventScroll: true });
+    if (li.offsetTop < list.scrollTop) list.scrollTop = li.offsetTop;
+    else if (li.offsetTop + li.offsetHeight > list.scrollTop + list.clientHeight) list.scrollTop = li.offsetTop + li.offsetHeight - list.clientHeight;
   }
   function openPop() {
     if (!dates.length) return;
@@ -668,10 +671,14 @@ footer p { margin: 0; }
     if (pop.hidden) return;
     pop.hidden = true; btn.setAttribute("aria-expanded", "false");
     opts().forEach(function (li) { li.classList.remove("active"); });
-    if (refocus) btn.focus();
+    if (refocus) btn.focus({ preventScroll: true });
   }
-  function pick(d) { closePop(true); if (d !== current) show(d); }
-  btn.addEventListener("click", function () { pop.hidden ? openPop() : closePop(false); });
+  function toContent() {
+    var top = document.querySelector(".mast").offsetHeight;
+    if (window.scrollY > top) window.scrollTo({ top: top });
+  }
+  function pick(d) { closePop(true); if (d !== current) { show(d); toContent(); } }
+  btn.addEventListener("click", function (e) { e.preventDefault(); pop.hidden ? openPop() : closePop(false); });
   btn.addEventListener("keydown", function (e) {
     if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); openPop(); }
   });
