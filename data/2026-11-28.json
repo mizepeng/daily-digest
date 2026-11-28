@@ -1,6 +1,6 @@
 {
   "date": "2026-11-28",
-  "updated": "2026-11-28T02:01:55Z",
+  "updated": "2026-11-28T02:02:13Z",
   "games": {
     "important": [
       {
@@ -83,7 +83,43 @@
         "date": "11-26"
       }
     ],
-    "brief": []
+    "brief": [
+      {
+        "title": "硬核洞穴求生《Casualties: Unknown》成 Steam 好评率最高的新求生游戏",
+        "summary": "Orsoniks 开发，11 月 9 日上线，5600 多条用户评测中 98% 为好评，洞穴系统共 11 层。",
+        "url": "https://www.gamesradar.com/games/survival/steams-highest-rated-new-survival-game-looks-like-rain-worlds-equally-evil-cousin-98-percent-positive-reviews-on-a-hardcore-cave-diving-simulator/",
+        "source": "GamesRadar+",
+        "date": "11-27"
+      },
+      {
+        "title": "Pocketpair 发行的《Clicky Islands》上线十天「全面超出目标」",
+        "summary": "《幻兽帕鲁》团队的发行负责人在 X 上发帖称赞这款由两位波兰开发者制作的独立游戏。",
+        "url": "https://www.gamesradar.com/games/strategy/the-latest-pocketpair-published-indie-has-smashed-every-target-says-palworld-lead-whos-proud-to-have-supported-a-real-gem/",
+        "source": "GamesRadar+",
+        "date": "11-27"
+      },
+      {
+        "title": "育碧回应：项目并非必须使用生成式 AI",
+        "summary": "此前 Vertical Slice 报道，育碧要求新项目提案说明如何使用生成式 AI，不用的团队要给出理由；育碧对此作出澄清。",
+        "url": "https://www.gamesradar.com/games/ubisoft-games-arent-required-to-use-generative-ai-assassins-creed-publisher-says-after-reports-emerge-that-devs-have-to-justify-not-using-it-in-pitches/",
+        "source": "GamesRadar+",
+        "date": "11-26"
+      },
+      {
+        "title": "《辛普森一家：横冲直撞》原班人马的未公布新作被取消",
+        "summary": "New Radical Games 设计师在 LinkedIn 上说项目属于「一大批取消」之一；外界猜测它是重制版，但并未证实。",
+        "url": "https://www.gamesradar.com/games/open-world/fans-fear-for-simpsons-hit-and-run-remake-after-unannounced-game-from-veterans-behind-the-og-is-canceled-months-after-series-creator-matt-groening-teased-a-comeback/",
+        "source": "GamesRadar+",
+        "date": "11-27"
+      },
+      {
+        "title": "育碧在诉讼中称《碧海黑帆》「4A 大作」只是营销夸张",
+        "summary": "玩家律师依据堪萨斯州消费者保护法起诉，法官 8 月已站在育碧一方，原告可能改到加州再诉。",
+        "url": "https://www.gamesradar.com/games/action/ubisoft-argued-calling-skull-and-bones-an-aaaa-game-wasnt-misleading-but-classic-puffery-not-intended-to-be-taken-as-fact-in-a-lawsuit/",
+        "source": "GamesRadar+",
+        "date": "11-26"
+      }
+    ]
   },
   "ai": {
     "important": [
